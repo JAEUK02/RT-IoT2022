@@ -4,6 +4,8 @@
 
 **Start here:** [`RT-IoT2022-2.ipynb`](RT-IoT2022-2.ipynb), which contains the data-loading, model, evaluation, and visualization cells in one place.
 
+For exact cell locations, model-input choices, and partial-rerun cautions, see the [notebook guide](docs/NOTEBOOK_GUIDE.md).
+
 ## Problem and contribution record
 
 Aggregate accuracy can hide poor coverage of rare traffic classes. This study reads the class distribution and compares class-level precision, recall, and F1 with feature-importance and PCA visualizations.
@@ -47,7 +49,7 @@ python -m pip install ucimlrepo pandas scikit-learn matplotlib seaborn jupyter
 jupyter notebook RT-IoT2022-2.ipynb
 ```
 
-Run cells in order. Dataset retrieval requires internet access. Dependency versions are not locked, and the saved outputs were inspected rather than rerun during this documentation review.
+Start with a fresh kernel and run cells in order. When rerunning the training cell, recreate the split first because the cell converts its label DataFrames to NumPy arrays; see [rerun guidance](docs/NOTEBOOK_GUIDE.md#running-and-rerunning-cells). Dataset retrieval requires internet access. Dependency versions are not locked, and the saved outputs were inspected rather than rerun during this documentation review.
 
 ## Status and limits
 
